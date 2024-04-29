@@ -12,4 +12,6 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'churrasco-angular';
+  interpolation = 'teste de texto com interpolação';
+  desabilitar = true;
 }

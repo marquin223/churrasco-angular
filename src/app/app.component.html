@@ -1,9 +1,12 @@
+<link rel="stylesheet" href="../../node_modules/@materializecss/materialize/dist/css/materialize.css">
 <header>
   <app-header></app-header>
 </header>
 
 <main>
   <router-outlet></router-outlet>
+  <h2>Interpolação: {{interpolation}}</h2>
+  <button class="btn" [disabled]="desabilitar">Botão disabilitado por property-binding</button>
 </main>
 
 <footer>
