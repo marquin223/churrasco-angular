@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { PaginaComponent } from './pagina/pagina.component';
+import { OutraPaginaComponent } from './outra-pagina/outra-pagina.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet ,HeaderComponent, FooterComponent],
+  imports: [RouterOutlet, RouterLink, HeaderComponent, FooterComponent, PaginaComponent, OutraPaginaComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'churrasco-angular';
-  interpolation = 'teste de texto com interpolação';
-  desabilitar = true;
 }
