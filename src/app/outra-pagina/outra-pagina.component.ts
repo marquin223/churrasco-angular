@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './outra-pagina.component.css'
 })
 export class OutraPaginaComponent {
-
+ 
 }
+  
+
+  
+

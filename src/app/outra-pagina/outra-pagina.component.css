@@ -1,0 +1,5 @@
+div {
+    display: flex;
+    justify-content: flex-start;
+    padding: 60px;
+}

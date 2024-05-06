@@ -1,4 +1,12 @@
 <link rel="stylesheet" href="../../../node_modules/@materializecss/materialize/dist/css/materialize.css">
-<a href="outra">
-    <button class="btn">Ir para outra pagina</button>
-</a>
+<div class="container">
+    <a href="outra">
+        <button class="btn">Ir para outra pagina</button>
+    </a>
+
+    <app-imprimir 
+    [value]="3" (nome)="this.onNome($event)">
+    </app-imprimir>
+
+    <p [hidden]="hide">Output nome: {{this.nome}}</p>
+</div>
