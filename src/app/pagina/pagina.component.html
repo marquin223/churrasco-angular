@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="../../../node_modules/@materializecss/materialize/dist/css/materialize.css">
+<div class="container">
+    <a *ngFor="let parametro of this.parametro" [routerLink]="['outra', parametro]"><button class="btn">Ir para outra pagina</button>  
+    </a>
+
+    <app-imprimir 
+    [value]="3" (nome)="this.onNome($event)">
+    </app-imprimir>
+
+    <p [hidden]="hide">Output nome: {{this.nome}}</p>
+</div>
+ 
