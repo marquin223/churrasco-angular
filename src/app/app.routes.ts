@@ -6,7 +6,8 @@ import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
     {path: '', component: PaginaComponent},
-    {path: 'outra', component: OutraPaginaComponent}
+    {path: 'outra', component: OutraPaginaComponent},
+    {path: 'outra/:id', component: OutraPaginaComponent}
 ];
 
 NgModule({
