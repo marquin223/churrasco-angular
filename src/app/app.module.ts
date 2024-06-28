@@ -7,7 +7,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CommonModule } from '@angular/common';
-import { LogadoComponent } from './logado/logado.component';
+import { ListaComponent } from './lista/lista.component';
+import { CriarListaComponent } from './criar-lista/criar-lista.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ListaPipe } from './lista.pipe';
+import { ModalComponent } from './modal/modal.component';
+import { CalculadoraComponent } from './calculadora/calculadora.component';
+
 
 
 @NgModule({
@@ -16,7 +22,11 @@ import { LogadoComponent } from './logado/logado.component';
     HeaderComponent,
     FooterComponent,
     CadastroComponent,
-    LogadoComponent
+    ListaComponent,
+    CriarListaComponent,
+    ListaPipe,
+    ModalComponent,
+    CalculadoraComponent
   ],
   imports: [
     CommonModule,
@@ -26,6 +36,8 @@ import { LogadoComponent } from './logado/logado.component';
   ],
   providers: [
     
+  
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

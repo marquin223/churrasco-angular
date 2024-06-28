@@ -27,7 +27,7 @@ export class CadastroComponent implements OnInit {
     console.log('Formulário enviado com sucesso!', this.formC);
     
     this.storageService.saveformC(this.formC);
-    this.router.navigate(['/cadastrado']);
+    this.router.navigate(['/lista']);
 
   }
 }
