@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="../../../node_modules/@materializecss/materialize/dist/css/materialize.css">
 </head>
 <body>
-  <app-modal (listaCriada)="onListaCriada()"></app-modal>
+  <app-modal (listaCriada)="carregarListas()"></app-modal>
 <div class="container">
   <div class="centro">
     <div *ngIf="listas.length > 0">

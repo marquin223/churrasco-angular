@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-modal',
@@ -13,6 +14,8 @@ export class ModalComponent {
   valid: boolean = true;
 
   @Output() listaCriada = new EventEmitter<void>();
+  
+  constructor(private http: HttpClient) {}
 
   openModal(): void {
     const modalElement = document.getElementById('modal1');
@@ -49,11 +52,13 @@ export class ModalComponent {
       total: total
     };
 
-    let listas = JSON.parse(localStorage.getItem('listas') || '[]');
-    listas.push(lista);
-    localStorage.setItem('listas', JSON.stringify(listas));
-
-    this.listaCriada.emit();
-    this.closeModal();
+    this.http.post('http://localhost:3000/listas', lista, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }).subscribe(() => {
+      this.listaCriada.emit();
+      this.closeModal();
+    });
   }
 }

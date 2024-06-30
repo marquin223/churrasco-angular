@@ -8,11 +8,11 @@ import { FooterComponent } from './footer/footer.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CommonModule } from '@angular/common';
 import { ListaComponent } from './lista/lista.component';
-import { CriarListaComponent } from './criar-lista/criar-lista.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ListaPipe } from './lista.pipe';
 import { ModalComponent } from './modal/modal.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -23,15 +23,16 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
     FooterComponent,
     CadastroComponent,
     ListaComponent,
-    CriarListaComponent,
     ListaPipe,
     ModalComponent,
+    
     CalculadoraComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [

@@ -21,7 +21,8 @@ export class CalculadoraComponent {
 
   calcular(): void {
     if (this.numeroDePessoas > 0) {
-      this.resultado = this.lista.total / this.numeroDePessoas;
+      const totalPorPessoa = this.lista.total / this.numeroDePessoas;
+      this.resultado = parseFloat(totalPorPessoa.toFixed(2)); 
     }
   }
 }
