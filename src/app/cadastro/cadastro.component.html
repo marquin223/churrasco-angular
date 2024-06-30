@@ -35,6 +35,16 @@
             <div *ngIf="senha.errors && senha.errors['required']">Campo obrigatório.</div>
           </div>
         </div>
+        <div>
+          <label for="cep">CEP:</label>
+          <input id="cep" type="text" [(ngModel)]="formC.cep" name="cep" (change)="buscarEndereco()" required />
+        </div>
+        <div *ngIf="endereco">
+          <p>Logradouro: {{ endereco.logradouro }}</p>
+          <p>Bairro: {{ endereco.bairro }}</p>
+          <p>Cidade: {{ endereco.localidade }}</p>
+          <p>Estado: {{ endereco.uf }}</p>
+        </div>
         <button type="submit" class="btn black" [disabled]="!formCadastro.valid">Cadastrar</button>
     </form>
   </div>
