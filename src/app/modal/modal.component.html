@@ -1,0 +1,48 @@
+<head>
+  <link rel="stylesheet" href="../../../node_modules/@materializecss/materialize/dist/css/materialize.css">
+</head>
+<div class="container">
+  <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" (click)="closeModal()">x</button>
+          <h5 class="modal-title">Selecione as Opções e Informe o Preço</h5>
+          
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="adicionarLista()">
+            <div class="form-group">
+              <label>
+                <input type="checkbox" [(ngModel)]="opcao1" name="opcao1" />
+                <span>Bebidas</span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input type="checkbox" [(ngModel)]="opcao2" name="opcao2" />
+                <span>Carne</span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input type="checkbox" [(ngModel)]="opcao3" name="opcao3" />
+                <span>Extras</span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Preço</span>
+                <input type="number" [(ngModel)]="preco" name="preco" placeholder="Informe o preço" required />
+              </label>
+            </div>
+            <div *ngIf="!valid" class="red-text">
+              <p>Por favor, selecione no mínimo uma opção e informe um preço maior que zero.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn">Adicionar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

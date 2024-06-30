@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../node_modules/@materializecss/materialize/dist/css/materialize.css">
+</head>
+<body>
+  <app-modal (listaCriada)="onListaCriada()"></app-modal>
+<div class="container">
+  <div class="centro">
+    <div *ngIf="listas.length > 0">
+      <h2>Listas</h2>
+      <div class="lista" *ngFor="let lista of listas; let i = index" (click)="Calculadora(i)">
+        <button>{{ lista | formatarLista }}</button>
+      </div>
+    </div>
+    <div *ngIf="listas.length === 0">
+      <p>Nenhuma lista criada.</p>
+    </div>
+    <div>
+      <button class="btn black" (click)="openModal()">Criar Nova Lista</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
